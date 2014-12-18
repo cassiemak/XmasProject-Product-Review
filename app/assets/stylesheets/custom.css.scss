@@ -1,8 +1,9 @@
 .body-background{
   /*background-color: #333330;*/
-  background-color: #bfbfbb;
+  background-color: rgba(0, 176, 185, 0.8);
   /*color: #bfbfbb;*/
-  color: #333330;
+  // color: #333330;
+  color: black;
 }
 
 .vertical-center {
@@ -11,4 +12,41 @@
 
   display: flex;
   align-items: center;
+}
+
+.nav {
+  padding: 20px;
+
+}
+
+.login {
+  text-align: right;
+  padding: 20px;
+}
+
+.home {
+  padding: 20px;
+}
+
+.product {
+  padding: 20px;
+}
+
+.product_Details {
+  text-align: left;
+  padding: 40px;
+}
+
+.product_Picture{
+  padding: 40px;
+}
+
+.comment {
+  padding: 20px;
+  text-align: left;
+}
+
+.author{
+  text-align: left;
+  padding: 0px;
 }
