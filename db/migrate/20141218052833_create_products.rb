@@ -7,7 +7,6 @@ class CreateProducts < ActiveRecord::Migration
       t.integer :price
       t.string :found_at
       t.string :description
-      t.integer :review_id
 
       t.timestamps
     end

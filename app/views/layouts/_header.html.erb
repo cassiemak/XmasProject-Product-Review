@@ -1,9 +1,17 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 nav">
-      <div class="col-xs-2 home text-center"><button>HOME</button></div>
-      <div class="col-xs-2 col-xs-offset-8 login">
-        Login Here
+      <div class="col-xs-2 home text-center"><%= link_to "HOME", root_path, :method => "get", :class => "btn btn-default" %></div>
+      <div class="col-xs-6 col-xs-offset-4 login">
+      
+          <% if current_user %>
+            <div> Welcome back, <%= current_user.email %></div>
+            <div><%= button_to "Sign Out", destroy_user_session_path, :method => "delete" %></div>
+          <% else %>
+            <%= link_to "Sign In", new_user_session_path, :method => "get", :class => "btn btn-default" %>
+            <%= link_to "Sign up", new_user_registration_path, :method => "get", :class => "btn btn-default" %>
+          <% end %>
+        
       </div>
     </div>
   </div>

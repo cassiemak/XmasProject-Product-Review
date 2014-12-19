@@ -4,8 +4,7 @@ class CreateUsers < ActiveRecord::Migration
 
       t.string :first_name
       t.string :last_name
-      t.string :email
-      t.integer :review_id
+      t.string :profile_picture_url
 
       t.timestamps
     end
