@@ -38,7 +38,10 @@
 }
 
 .product_Picture{
-  padding: 40px;
+  padding: 20px;
+  max-width: 300px;
+  // min-height: 500px;
+  // min-width: 500px;
 }
 
 .comment {
@@ -49,4 +52,41 @@
 .author{
   text-align: left;
   padding: 0px;
+}
+
+
+.product_Review {
+  padding: 40px;
+}
+
+.author_picture{
+  max-width: 120px;
+}
+
+.details {
+  padding: 3px;
+}
+
+.newComment {
+  // min-height: 100px;
+  // height: 80px;
+  padding: 10px;
+}
+
+.new-review {
+  padding: 0px 20px 100px 20px;
+}
+
+.padding{
+  padding: 10px;
+}
+
+#like-dislike {
+  text-align: right;
+  padding: 3px;
+}
+
+button{
+  text-align: center center;
+  padding: 4px;
 }

@@ -1,16 +1,18 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-xs-offset-1 product_Name">
+    <div class="col-xs-12 product_Name">
       <h1>Product Name</h1>
     </div>
     <div class="col-xs-12">
-      <span class="col-xs-6 text-center product_Picture">Product Picture</span>
-      <span class="col-xs-6 product_Details">
-        <div>Product Name: Baby Basket</div>
-        <div>Brand: Baby Mama</div>
-        <div>Price: $100</div>
-        <div>Found at: Baby Store</div>
-        <div>Description: baby rocks Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      <span class="col-xs-12 col-sm-4 text-center product_Picture">
+        <%= image_tag "neckcushion.JPG", :class => "img-responsive" %>
+      </span>
+      <span class="col-xs-12 col-sm-6 col-sm-offset-1 product_Details">
+        <div class="details">Product Name: Baby Basket</div>
+        <div class="details">Brand: Baby Mama</div>
+        <div class="details">Price: $100</div>
+        <div class="details">Found at: Baby Store</div>
+        <div class="details">Description: baby rocks Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -18,8 +20,12 @@
         </div>
       </span>
     </div>
+    <!-- Product review section -->
+    <div class="col-xs-12"><h3>Product Review</h3></div>
     <div class="col-xs-12 text-center product_Review">
-      <div class="col-md-3 author_picture">Reviewer Picture</div>
+      <div class="hidden-xs hidden-sm col-md-3 author_picture">
+        <%= image_tag "profile/penguin.jpg", :class => "img-responsive" %>
+      </div>
       <div class="col-xs-12 col-sm-12 col-md-9 review">
         <div class="col-xs-12">
           <div class="col-xs-4 author">Author</div>
@@ -29,8 +35,38 @@
         <div class="col-xs-12 comment">
           Comment Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+      </div>
+    </div>
+    <!-- prompt logged in user to comment -->
+    <div class="col-xs-12">
+      <div class="hidden-xs hidden-sm col-md-3 author_picture">
+        <%= image_tag "profile/lion.jpg", :class => "img-responsive" %>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-9 new-review">
+        <!--<div class="col-xs-12">
+          <div class="col-xs-4 author">Author</div>
+          <div class="col-xs-4 timestamp">Timestamp</div>
+          <div class="col-xs-4 rating">Ratings</div>
+        </div> -->
+        <div>
+          <textarea type="text" rows="3" class="col-xs-12 newComment" placeholder="Enter your review here"></textarea>
+        </div>
+        <div class="col-xs-12" id="like-dislike">
+          <button type="submit" value="submit" id="submit-posbutton">
+            I'd recommend it</button>
+          <button type="submit" value="submit" id="submit-negbutton">I'd return it</button>
+          <button type="submit" value="submit" id="submit-button">SUBMIT</button> 
         </div>
       </div>
     </div>
   </div>
+</div>
+
