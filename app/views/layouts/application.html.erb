@@ -5,14 +5,10 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <script type="text/javascript" src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
-  
-
   <%= csrf_meta_tags %>
 </head>
 <body class="body-background">
-
   <%= render "layouts/header" %>
   <%= yield %>
-
 </body>
 </html>

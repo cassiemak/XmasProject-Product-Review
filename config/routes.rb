@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :reviews
   resources :products 
 
+  post 'reviews/:id', to: 'reviews#create'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

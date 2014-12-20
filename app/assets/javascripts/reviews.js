@@ -1,3 +1,8 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+var new_review = "<%= raw escape_javascript(render :partial => 'products/review', :locals => {:review => @review}) %>";
+
+$('.product_Review').append(new_review);
+
+$('.newComment').val(""); 
+
+// review.message
+// review.rating
