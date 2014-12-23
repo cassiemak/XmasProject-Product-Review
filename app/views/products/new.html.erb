@@ -1,0 +1,23 @@
+<h2>Create New Product</h2>
+
+<%= simple_form_for @product, :method=> :post do |f| %>
+ 
+  <%= flash[:review] %>
+
+  <%= f.label :product_name %>
+  <%= f.text_field :product_name %>
+
+  <%= f.label :brand %>
+  <%= f.text_field :brand %>
+
+    <%= f.label :price %>
+  <%= f.number_field :price %>
+
+    <%= f.label :found_at %>
+  <%= f.text_field :found_at %>
+
+    <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.submit "Submit" %>
+<% end %>
