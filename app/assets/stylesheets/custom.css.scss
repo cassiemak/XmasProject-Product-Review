@@ -1,9 +1,21 @@
 .body-background{
   /*background-color: #333330;*/
   background-color: rgba(0, 176, 185, 0.8);
+  background-image: image-url('baby-background.jpg');
+  background-size: cover;
   /*color: #bfbfbb;*/
   // color: #333330;
   color: black;
+}
+
+
+.signup-box{
+  // background-color: rgba(0, 176, 185, 0.8);
+  background-color: rgba(100, 100, 100, 0.4);
+  // background: transparent;
+  padding: 50px;
+  text-align: center center;
+  align-content: center;
 }
 
 .vertical-center {
