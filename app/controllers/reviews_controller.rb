@@ -4,24 +4,24 @@ class ReviewsController < ApplicationController
   def create
 
     if current_user 
-      review = current_user.reviews.new(
+      @review = current_user.reviews.new(
         :product_id => params[:review][:product_id],
         :message => params[:review][:message],
         :rating => params[:review][:rating]
       )
 
-      if review.save
-        redirect_to :back 
-        # respond_to do |format|
-          # format.js {render 'create.js.erb'}
-          # format.html{ redirect_to @review.product }
-        # end
+      if @review.save
+        # redirect_to :back 
+        respond_to do |format|
+          format.js {render 'create.js.erb'}
+          format.html{ redirect_to @review }
+        end
       else
-        redirect_to :back
-        # respond_to do |format|
-        #   format.js {render 'fail.js.erb'}
-        #   format.html{ redirect_to :back}
-        # end
+        # redirect_to :back
+        respond_to do |format|
+          format.js {render 'fail.js.erb'}
+          format.html{ redirect_to :back}
+        end
       end
     else
       redirect_to new_user_session_path 
