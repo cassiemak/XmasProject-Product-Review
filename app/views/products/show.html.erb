@@ -7,12 +7,12 @@
       <span class="col-xs-12 col-sm-4 text-center product_Picture">
         <%= image_tag "neckcushion.jpg", :class => "img-responsive" %>
       </span>
-      <span class="col-xs-12 col-sm-6 col-sm-offset-1 product_Details">
-        <div class="details">Product Name: <%= @product.product_name %></div>
-        <div class="details">Brand: <%= @product.brand %></div>
-        <div class="details">Price: $<%= @product.price %></div>
-        <div class="details">Found at: <%= @product.found_at %></div>
-        <div class="details">Description: <%= @product.description %>
+      <span class="col-xs-12 col-sm-7 col-sm-offset-1 product_Details">
+        <div class="details"><h4>Product Name:</h4><%= @product.product_name %></div>
+        <div class="details"><h4>Brand: </h4> <%= @product.brand %></div>
+        <div class="details"><h4>Price: </h4> $<%= @product.price %></div>
+        <div class="details"><h4>Found at: </h4><%= @product.found_at %></div>
+        <div class="details"><h4>Description: </h4><%= @product.description %>
         </div>
       </span>
     </div>
@@ -41,23 +41,27 @@
 
     <!-- prompt logged in user to comment -->
     <div class="col-xs-12 new-review">
-      <%= form_for Review.new, :method => :post do |f| %>
-        <div class="hidden-xs hidden-sm col-md-3 author_picture">
-          <%= image_tag "profile/lion.jpg", :class => "img-responsive" %>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-9 ">
-          <div>
-            <%= f.text_area :message, :type => "text", :row => "3", :class=> "col-xs-12 newComment", :placeholder => "Enter your review here" %> 
-            <%= f.text_field :product_id, :value => @product.id, :type => "hidden" %>
+      <% if current_user %>
+        <%= form_for Review.new, :method => :post do |f| %>
+          <div class="hidden-xs hidden-sm col-md-3 author_picture">
+            <%= image_tag "profile/lion.jpg", :class => "img-responsive" %>
           </div>
-          <div class="col-xs-12" id="like-dislike">
-              <!-- <input type="checkbox" value="uncheck" id="submit-posbutton">I'd recommend it
-              <input type="checkbox" value="uncheck" id="submit-negbutton">I'd return it -->
-              <%= f.radio_button :rating, 1, :id => "submit-posbutton" %> I'd recommend it 
-              <%= f.radio_button :rating, -1, :id => "submit-negbutton" %> I'd return it 
-              <%= f.submit "SUBMIT", :id => "submit-button", :class => "btn btn-success" %>
+          <div class="col-xs-12 col-sm-12 col-md-9 ">
+            <div>
+              <%= f.text_area :message, :type => "text", :row => "3", :class=> "col-xs-12 newComment", :placeholder => "Enter your review here" %> 
+              <%= f.text_field :product_id, :value => @product.id, :type => "hidden" %>
+            </div>
+            <div class="col-xs-12" id="like-dislike">
+                <!-- <input type="checkbox" value="uncheck" id="submit-posbutton">I'd recommend it
+                <input type="checkbox" value="uncheck" id="submit-negbutton">I'd return it -->
+                <%= f.radio_button :rating, 1, :id => "submit-posbutton" %> I'd recommend it 
+                <%= f.radio_button :rating, -1, :id => "submit-negbutton" %> I'd return it 
+                <%= f.submit "SUBMIT", :id => "submit-button", :class => "btn btn-success" %>
+            </div>
           </div>
-        </div>
+        <% end %>
+      <% else %>
+        <h4>Please sign in to enter your review!</h4> 
       <% end %>
     </div>
     <!-- close row and container -->
