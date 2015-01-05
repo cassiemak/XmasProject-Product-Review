@@ -11,6 +11,24 @@
           <% end %>
       </span>
 
+      <span class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <%= link_to "products/show" do %>
+          <%= image_tag "neckcushion.jpg", :class => "img-responsive" %>
+          <% end %>
+      </span>
+
+      <span class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <%= link_to "products/show" do %>
+          <%= image_tag "neckcushion.jpg", :class => "img-responsive" %>
+          <% end %>
+      </span>
+
+      <span class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <%= link_to "products/show" do %>
+          <%= image_tag "neckcushion.jpg", :class => "img-responsive" %>
+          <% end %>
+      </span>
+
       <span class="col-xs-12 col-sm-6 col-md-4 col-lg-3">Product 1b</span>
       <span class="col-xs-12 col-sm-6 col-md-4 col-lg-3">Product 1c</span>
 <!--     </div>
@@ -20,10 +38,12 @@
       <span class="col-xs-12 col-sm-6 col-md-4 col-lg-3">Product 2c</span>
 
       <% @products.each do |product| %>
+      <span class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
         <%= link_to product do %>
           product individual pix
           <%= product.id %>
         <% end -%>
+      </span>
       <% end %>
 
     </div>
