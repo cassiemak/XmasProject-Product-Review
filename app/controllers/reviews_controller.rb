@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
-    def create
+  def create
     @review = current_user.comments.new(:product_id => params[:review][:product_id], :message => params[:review][:message])
 
     if @comment.save
@@ -16,4 +16,7 @@ class ReviewsController < ApplicationController
       end
     end
   end
+
+  
+
 end

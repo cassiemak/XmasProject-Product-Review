@@ -38,6 +38,10 @@ gem 'binding_of_caller', group: :development
 
 gem 'simple_form'
 
+gem 'fog'
+
+gem 'carrierwave'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

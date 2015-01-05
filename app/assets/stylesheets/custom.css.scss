@@ -1,11 +1,17 @@
 .body-background{
   /*background-color: #333330;*/
-  background-color: rgba(0, 176, 185, 0.8);
-  background-image: image-url('baby-background.jpg');
-  background-size: cover;
-  /*color: #bfbfbb;*/
-  // color: #333330;
-  color: black;
+  // background-color: rgba(0, 176, 185, 0.8);
+  // background-image: image-url('baby-background.jpg');
+  // background-size: cover;
+  // /*color: #bfbfbb;*/
+  // // color: #333330;
+  // color: black;
+
+  background: url(/assets/baby-background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
 }
 
 
