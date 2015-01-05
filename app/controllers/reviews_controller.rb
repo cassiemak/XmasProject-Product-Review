@@ -8,7 +8,7 @@ class ReviewsController < ApplicationController
     )
 
     if review.save
-      redirect_to products_path 
+      redirect_to :back 
       # respond_to do |format|
         # format.js {render 'create.js.erb'}
         # format.html{ redirect_to @review.product }
