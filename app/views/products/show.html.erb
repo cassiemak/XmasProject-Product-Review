@@ -8,15 +8,11 @@
         <%= image_tag "neckcushion.jpg", :class => "img-responsive" %>
       </span>
       <span class="col-xs-12 col-sm-6 col-sm-offset-1 product_Details">
-        <div class="details">Product Name: Baby Basket</div>
-        <div class="details">Brand: Baby Mama</div>
-        <div class="details">Price: $100</div>
-        <div class="details">Found at: Baby Store</div>
-        <div class="details">Description: baby rocks Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        <div class="details">Product Name: <%= @product.product_name %></div>
+        <div class="details">Brand: <%= @product.brand %></div>
+        <div class="details">Price: $<%= @product.price %></div>
+        <div class="details">Found at: <%= @product.found_at %></div>
+        <div class="details">Description: <%= @product.description %>
         </div>
       </span>
     </div>
