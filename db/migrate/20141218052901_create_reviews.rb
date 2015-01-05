@@ -7,6 +7,9 @@ class CreateReviews < ActiveRecord::Migration
       t.integer :product_id
       t.integer :rating
 
+      # timestamp is the same thing as
+      # t.datetime :created_at
+      # t.datetime :updated_at
       t.timestamps
     end
   end
