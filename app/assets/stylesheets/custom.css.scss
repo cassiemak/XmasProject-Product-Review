@@ -75,7 +75,7 @@
 
 
 .product_Review {
-  padding: 40px;
+  padding: 20px;
 }
 
 .author_picture{
@@ -89,7 +89,7 @@
 .newComment {
   // min-height: 100px;
   // height: 80px;
-  padding: 10px;
+  padding: 20px;
 }
 
 .new-review {
@@ -123,5 +123,7 @@ button{
 }
 
 .single-review{
-  padding: 10px;
+  padding: 20px;
+  margin: 10px;
+  background-color: rgba(100, 100, 100, 0.4);
 }

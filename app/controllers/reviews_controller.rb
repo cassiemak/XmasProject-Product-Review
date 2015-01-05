@@ -4,7 +4,8 @@ class ReviewsController < ApplicationController
   def create
     review = current_user.reviews.new(
       :product_id => params[:review][:product_id],
-      :message => params[:review][:message]
+      :message => params[:review][:message],
+      :rating => params[:review][:rating]
     )
 
     if review.save
