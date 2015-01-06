@@ -42,6 +42,8 @@ gem 'fog'
 
 gem 'carrierwave'
 
+gem 'aws-sdk', '~> 1.5.7'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

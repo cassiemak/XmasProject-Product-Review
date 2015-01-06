@@ -54,6 +54,8 @@
 .product_Details {
   text-align: left;
   padding: 20px;
+  background-color: rgba(100, 100, 100, 0.4);
+  
 }
 
 .details{
@@ -132,4 +134,8 @@ button{
   padding: 20px;
   margin: 10px;
   background-color: rgba(100, 100, 100, 0.4);
+}
+
+.edit-comment{
+  text-align: right;
 }
