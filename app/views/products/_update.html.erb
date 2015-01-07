@@ -1,0 +1,24 @@
+<%= form_for @review, :remote => true, :method => :patch do |f| %>
+  <div class="hidden-xs hidden-sm col-md-3 author_picture">
+    <%= image_tag "profile/lion.jpg", :class => "img-responsive" %>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-9 ">
+    <div>
+      <%= f.text_area :message, :type => "text", :row => "3", :class=> "col-xs-12 newComment", :placeholder => "review.message" %> 
+      <%= f.text_field :product_id, :value => review.product_id, :type => "hidden" %>
+    </div>
+    <div class="col-xs-12" id="like-dislike">
+
+        <% if review.rating == 1 %> 
+          <%= f.radio_button :rating, 1, :checked => true, :id => "submit-posbutton" %> I'd recommend it 
+          <%= f.radio_button :rating, -1, :id => "submit-negbutton" %> I'd return it 
+        <% elsif review.rating == -1 %>
+          <%= f.radio_button :rating, 1, :id => "submit-posbutton" %> I'd recommend it 
+          <%= f.radio_button :rating, -1, :checked => true, :id => "submit-negbutton" %> I'd return it 
+        <% else %>
+        <% end %>
+        <%= f.submit "Update", :id => "submit-button", :class => "btn btn-success btn-sm" %>
+
+    </div>
+  </div>
+<% end %>

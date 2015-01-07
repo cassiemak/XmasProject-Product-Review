@@ -25,6 +25,8 @@ before_action :authenticate_user!, only: [:new, :create]
     @product = Product.find(params[:id])
 
     @reviews = @product.reviews
+
+    # @user = @reviews.email
   end
 
   private

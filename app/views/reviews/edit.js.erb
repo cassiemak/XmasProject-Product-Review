@@ -1,0 +1,15 @@
+// var reviewId = "<%= @review.id %>";
+
+// var updatedReview = "Hellow World";
+
+// $('.single-review[data-review-id=' + reviewId + ']').text(updatedReview);
+
+console.log("lalala edit works!");
+$("#new-form").hide();
+$("#update-form").show();
+
+$("#update-form").html("<%= escape_javascript render :partial => 'products/update', :locals => {:review => @review} %> ");
+
+$('html,body').animate({scrollTop:$(this.hash).offset().top}, 1000);
+
+
