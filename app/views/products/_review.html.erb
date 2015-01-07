@@ -6,7 +6,16 @@
     <div class="col-xs-12">
       <div class="col-xs-4 author"> <%= review.user_id %> </div>
       <div class="col-xs-4 timestamp"> <%= review.created_at %></div>
-      <div class="col-xs-4 rating"> <%= review.rating %> </div>
+      <div class="col-xs-4 rating"> 
+        
+        <% if review.rating == 1 %> 
+          <img src="<%= asset_path "Thumbs_Up.png" %>" class="img-responsive rating-image">
+        <% elsif review.rating == -1 %>
+          <img src="<%= asset_path "Thumbs_down.png" %>" class="img-responsive rating-image">
+        <% else %>
+        <% end %>
+        
+      </div>
     </div>
     <div class="col-xs-12 comment">
       <%= review.message %>

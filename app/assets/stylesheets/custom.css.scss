@@ -55,7 +55,6 @@
   text-align: left;
   padding: 20px;
   background-color: rgba(100, 100, 100, 0.4);
-  
 }
 
 .details{
@@ -65,9 +64,23 @@
 .product_Picture{
   padding: 20px;
   max-width: 300px;
+  opacity: 0.8;
+  border: 10px;
+  border-color: red;
   // min-height: 500px;
   // min-width: 500px;
 }
+
+.index-pix{
+  opacity: 0.8;
+  border: 50px;
+  border-color: red;
+}
+
+img.index-pix:hover{
+    color: red;
+    border: 5px;
+  }
 
 .comment {
   padding: 20px;
@@ -78,7 +91,6 @@
   text-align: left;
   padding: 0px;
 }
-
 
 .product_Review {
   padding: 0px 10px;
@@ -102,6 +114,12 @@
   padding: 20px;
   margin-bottom: 100px;
   background-color: rgba(100, 100, 100, 0.4);
+}
+
+.rating-image{
+  max-height: 80px;
+  // align-content: right;
+  // text-align: right;
 }
 
 .padding{
