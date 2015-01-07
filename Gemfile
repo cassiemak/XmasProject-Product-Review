@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
+
 # Use postgresql as the database for Production
 gem 'pg', group: :production
 # Use sqlite3 as the database for Development
@@ -20,7 +21,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails', '~> 2.3.0'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -40,7 +41,7 @@ gem 'simple_form'
 
 gem 'fog'
 
-gem 'carrierwave'
+# gem 'carrierwave'
 
 gem 'aws-sdk', '~> 1.5.7'
 
@@ -59,3 +60,4 @@ gem 'rails_12factor'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+ruby '2.1.2'
