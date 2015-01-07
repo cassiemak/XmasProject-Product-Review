@@ -1,4 +1,4 @@
-<div class="row single-review">
+<div class="row single-review" data-review-id="<%= review.id %>">
   <div class="hidden-xs hidden-sm col-md-3 author_picture">
     <%= image_tag "profile/penguin.jpg", :class => "img-responsive" %>
   </div>
@@ -22,7 +22,13 @@
     </div>
     <div class="col-xs-12 edit-comment">
       <button class="edit-button btn btn-warning btn-sm">Edit</button>
-      <button class="delete-button btn btn-danger btn-sm">Delete</button>
+
+      <%= form_for review, :remote => true, :method => :delete do |f| %>
+        <!-- <button class="delete-button btn btn-danger btn-sm">Delete</button> -->
+        <!-- deleting the review of THIS specific review -->
+        <%= f.submit "Delete", :class => "delete-button btn btn-danger btn-sm" %>
+      <% end %>
+
     </div>
   </div>
 </div>
