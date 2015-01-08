@@ -17,6 +17,7 @@
           <%= f.radio_button :rating, -1, :checked => true, :id => "submit-negbutton" %> I'd return it 
         <% else %>
         <% end %>
+        <%= f.submit "Cancel", :id => "cancel-button", :class => "btn btn-warning btn-sm" %>
         <%= f.submit "Update", :id => "submit-button", :class => "btn btn-success btn-sm" %>
     </div>
   </div>

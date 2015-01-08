@@ -43,8 +43,6 @@ class ReviewsController < ApplicationController
   def update
     @review = Review.find(params[:id]) 
 
-    
-
     if @review.update(
         :message => params[:review][:message],
         :rating => params[:review][:rating]
@@ -61,5 +59,6 @@ class ReviewsController < ApplicationController
     end
 
   end
+
 
 end
