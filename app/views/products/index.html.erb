@@ -10,14 +10,14 @@
     </div>
     <div class="col-xs-12 product">
       <% @products.each do |product| %>
-        <span class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="index-pix">
             <%= link_to product do %>
-              <%= image_tag product.img_url, :class => "img-responsive " %>
+              <%= image_tag product.img_url, :class => "img-responsive" %>
               <%= product.product_name %>
             <% end %>
           </div>
-        </span>
+        </div>
       <% end %>
     </div>
     

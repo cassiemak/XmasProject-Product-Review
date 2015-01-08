@@ -24,6 +24,8 @@
 
 .nav {
   // padding: 20px;
+  // margin-top: 30px;
+  align-content: center center;
 }
 
 
@@ -46,19 +48,39 @@
 
 // Sign In Page
 
-.login div{
+.welcome-line{
   text-align: right;
-  // padding: 20px;
-  align-content: right;
+  margin: 10px;
+}
+
+.welcome{
+  font-weight: bold;
+}
+
+div.login{
+  text-align: right;
+  padding-right: 0;
+  display: inline-block;
+  // align-content: right;
+  // display: inline-block;
+}
+
+.search-bar{
+  display: inline-block;
+}
+
+input.search{
+  max-width: 250px;
   display: inline-block;
 }
 
 // Product Index Page
-.home {
-  padding: 20px;
-  text-align: left;
-  align-content: left;
+div.home {
+  // text-align: left;
+  // align-content: left;
+  padding-left: 0;
 }
+
 
 .product{
   padding: 20px;
@@ -69,16 +91,17 @@
 }
 
 .index-pix{
-  opacity: 0.8;
-  border: 50px;
-  border-color: red;
+  // opacity: 0.8;
+  // border: 50px;
+  // border-color: red;
+  align-content: center center;
   &:hover {
     opacity: 1;
     text-decoration: none;
-    background-color: black;
+    // background-color: black;
     color: red;
-    border: 10px;
-    border-color: red;
+    // border: 10px;
+    // border-color: red;
     font-size: xx-large;
 
   }
@@ -102,12 +125,10 @@
 }
 
 .product-picture{
-  // padding: 20px;
   opacity: 0.8;
   border: 10px s;
   border-color: red;
-  // min-height: 500px;
-  // min-width: 500px;
+
 }
 
 .img-thumbnail.product-img{
@@ -120,12 +141,11 @@
 }
 
 .product_Review {
-  // padding: 0px 10px;
+
 }
 
 .first-row-review{
-  // text-align: right;
-  // align-content: right;
+
 }
 
 .edit-comment{
