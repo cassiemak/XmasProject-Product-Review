@@ -27,19 +27,13 @@
           <%= review.message %>
         </div>
         <div class="col-xs-12 edit-comment">
-
-        <%= form_for review, :url => edit_review_path(review), :remote => true, :method => :get do |f| %>
-
-            <%= f.submit "Edit", :class => "edit-button btn btn-warning btn-sm" %>
-          <% end %>
-
-
-          <!-- <a type="button" class="edit-button btn btn-warning btn-sm" data-id="<%= review.id %>" href="#update-form">Edit</a>  -->
-
-          <%= form_for review, :remote => true, :method => :delete do |f| %>
-            <!-- <button class="delete-button btn btn-danger btn-sm">Delete</button>
-            <!-- deleting the review of THIS specific review -->
+          <% if current_user == review.user %>
+            <%= form_for review, :url => edit_review_path(review), :remote => true, :method => :get do |f| %>
+              <%= f.submit "Edit", :class => "edit-button btn btn-warning btn-sm" %>
+            <% end %>
+            <%= form_for review, :remote => true, :method => :delete do |f| %>
             <%= f.submit "Delete", :class => "delete-button btn btn-danger btn-sm" %>
+            <% end %>
           <% end %>
         </div>
       </div>
