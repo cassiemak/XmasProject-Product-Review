@@ -1,21 +1,25 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 product_Name">
+    <div class="col-xs-12 product-name">
       <h1><%= @product.product_name %></h1>
     </div>
     
     <div class="col-xs-12">
-      <span class="col-xs-12 col-sm-4 text-center product_Picture">
-        <%= image_tag "product/neckcushion.jpg", :class => "img-responsive img-thumbnail" %>
-      </span>
-      <span class="col-xs-12 col-sm-7 col-sm-offset-1 product_Details">
-        <div class="details"><h4>Product Name:</h4><%= @product.product_name %></div>
-        <div class="details"><h4>Brand: </h4> <%= @product.brand %></div>
-        <div class="details"><h4>Price: </h4> $<%= @product.price %></div>
-        <div class="details"><h4>Found at: </h4><%= @product.found_at %></div>
-        <div class="details"><h4>Description: </h4><%= @product.description %>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 product-picture">
+          <%= image_tag @product.img_url, :class => "img-responsive img-thumbnail product-img" %>
         </div>
-      </span>
+
+        <div class="col-xs-12 col-sm-8 product_Details">
+          <div class="details"><h4>Product Name:</h4><%= @product.product_name %></div>
+          <div class="details"><h4>Brand: </h4> <%= @product.brand %></div>
+          <div class="details"><h4>Price: </h4> $<%= @product.price %></div>
+          <div class="details"><h4>Found at: </h4><%= @product.found_at %></div>
+          <div class="details"><h4>Description: </h4><%= @product.description %>
+          </div>
+        </div>
+
+      </div>
     </div>
     <!-- Product review section -->
     <div class="col-xs-12"><h3>Product Review</h3></div>

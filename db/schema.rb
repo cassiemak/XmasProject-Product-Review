@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20141219072831) do
     t.integer  "price"
     t.string   "found_at"
     t.string   "description"
+    t.string   "img_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

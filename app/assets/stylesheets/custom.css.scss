@@ -14,6 +14,21 @@
           background-size: cover;
 }
 
+.vertical-center {
+  min-height: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  padding: 20px;
+}
+
+
+
+// Sign Up Page
 
 .signup-box{
   // background-color: rgba(0, 176, 185, 0.8);
@@ -25,18 +40,11 @@
   padding-top: 50px;
 }
 
-.vertical-center {
-  min-height: 100%;
-  min-height: 100vh;
-
-  display: flex;
-  align-items: center;
+#signup-title {
+  padding: 10px 0px;
 }
 
-.nav {
-  padding: 20px;
-
-}
+// Sign In Page
 
 .login div{
   text-align: right;
@@ -45,35 +53,13 @@
   display: inline-block;
 }
 
+// Product Index Page
 .home {
   padding: 20px;
 }
 
-.product {
+.product{
   padding: 20px;
-}
-
-.product_Details {
-  text-align: left;
-  padding: 20px;
-  background-color: rgba(100, 100, 100, 0.4);
-}
-
-.details{
-  // display: inline-block;
-}
-
-.right-inner-addon{
-  align-content: right;
-}
-.product_Picture{
-  padding: 20px;
-  max-width: 300px;
-  opacity: 0.8;
-  border: 10px;
-  border-color: red;
-  // min-height: 500px;
-  // min-width: 500px;
 }
 
 #intro{
@@ -96,8 +82,51 @@
   }
 }
 
-#index-pix-name{
+// Product Individual Page
 
+.product-name{
+  margin-bottom: 20px;
+}
+.product_Details {
+  text-align: left;
+  padding: 20px;
+  background-color: rgba(240, 223, 94, 0.7);
+}
+
+.single-review{
+  padding: 20px;
+  margin: 10px;
+  background-color: rgba(240, 223, 94, 0.7);
+}
+
+.product-picture{
+  // padding: 20px;
+  opacity: 0.8;
+  border: 10px s;
+  border-color: red;
+  // min-height: 500px;
+  // min-width: 500px;
+}
+
+.img-thumbnail.product-img{
+  max-width: 300px;
+  margin-left: -15px;
+}
+
+.right-inner-addon{
+  align-content: right;
+}
+
+.product_Review {
+  // padding: 0px 10px;
+}
+
+.edit-comment{
+  text-align: right;
+}
+
+.edit-comment form {
+  display: inline-block;
 }
 
 .comment {
@@ -110,10 +139,6 @@
   padding: 0px;
 }
 
-.product_Review {
-  padding: 0px 10px;
-}
-
 .author_picture{
   max-width: 120px;
 }
@@ -123,8 +148,6 @@
 }
 
 .newComment {
-  // min-height: 100px;
-  // height: 80px;
   padding: 20px;
 }
 
@@ -154,10 +177,6 @@ button{
   padding: 4px;
 }
 
-#signup-title {
-  padding: 10px 0px;
-}
-
 .actions{
   padding: 10px 0px;
 }
@@ -165,19 +184,4 @@ button{
 .field{
   padding: 5px 0px;
 }
-
-.single-review{
-  padding: 20px;
-  margin: 10px;
-  background-color: rgba(100, 100, 100, 0.4);
-}
-
-.edit-comment{
-  text-align: right;
-}
-
-.edit-comment form {
-  display: inline-block;
-}
-
 

@@ -1,9 +1,19 @@
 console.log("update lalala");
 
+// check if an edit has been clicked before
+// if yes
+//  do the cancel acntion first
+//  clear that variable to false
+// end
+
+// appending
 var updated_review = "<%= raw escape_javascript(render :partial => 'products/review', :locals => {:review => @review}) %>"; 
 
 $("#new-form").show();
 $("#update-form").hide();
 $('.product_Review').append(updated_review);
+
+// an edit button has been clicked
+
 
 // $('html,body').animate({scrollTop:$('.single-review[data-review-id=' + reviewId + ']').offset().top}, 1000);

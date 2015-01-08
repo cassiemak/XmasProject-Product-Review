@@ -31,7 +31,7 @@ before_action :authenticate_user!, only: [:new, :create]
 
   private
   def product_param
-    params.require(:product).permit(:product_name, :brand, :price, :found_at, :description)
+    params.require(:product).permit(:product_name, :brand, :price, :found_at, :description, :img_url)
   end
 
 end
