@@ -11,11 +11,22 @@
 
         <% if review.rating == 1 %> 
           <%= f.radio_button :rating, 1, :checked => true, :id => "submit-posbutton" %> I'd recommend it 
+          <%= f.radio_button :rating, 0, :checked => false, :id => "submit-neutralbutton" %> I feel neutral 
           <%= f.radio_button :rating, -1, :id => "submit-negbutton" %> I'd return it 
+
+        <% elsif review.rating == 0 %>
+          <%= f.radio_button :rating, 1, :id => "submit-posbutton" %> I'd recommend it 
+          <%= f.radio_button :rating, 0, :checked => true, :id => "submit-neutralbutton" %> I feel neutral 
+          <%= f.radio_button :rating, -1, :checked => false, :id => "submit-negbutton" %> I'd return it 
+        
         <% elsif review.rating == -1 %>
           <%= f.radio_button :rating, 1, :id => "submit-posbutton" %> I'd recommend it 
+          <%= f.radio_button :rating, 0, :checked => false, :id => "submit-neutralbutton" %> I feel neutral 
           <%= f.radio_button :rating, -1, :checked => true, :id => "submit-negbutton" %> I'd return it 
         <% else %>
+          <%= f.radio_button :rating, 1, :checked => false, :id => "submit-posbutton" %> I'd recommend it 
+          <%= f.radio_button :rating, 0, :checked => false, :id => "submit-neutralbutton" %> I feel neutral 
+          <%= f.radio_button :rating, -1, :checked => false, :id => "submit-negbutton" %> I'd return it 
         <% end %>
         <%= f.submit "Cancel", :id => "cancel-button", :class => "btn btn-warning btn-sm" %>
         <%= f.submit "Update", :id => "submit-button", :class => "btn btn-success btn-sm" %>

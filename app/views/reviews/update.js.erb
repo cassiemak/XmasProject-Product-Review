@@ -2,6 +2,8 @@ console.log("update lalala");
 
 var updated_review = "<%= raw escape_javascript(render :partial => 'products/review', :locals => {:review => @review}) %>"; 
 
+$("#new-form").show();
+$("#update-form").hide();
 $('.product_Review').append(updated_review);
 
 // $('html,body').animate({scrollTop:$('.single-review[data-review-id=' + reviewId + ']').offset().top}, 1000);

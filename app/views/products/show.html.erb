@@ -45,6 +45,7 @@
                   <!-- <input type="checkbox" value="uncheck" id="submit-posbutton">I'd recommend it
                   <input type="checkbox" value="uncheck" id="submit-negbutton">I'd return it -->
                   <%= f.radio_button :rating, 1, :id => "submit-posbutton" %> I'd recommend it 
+                  <%= f.radio_button :rating, 0, :id => "submit-neutralbutton" %> I feel neutral 
                   <%= f.radio_button :rating, -1, :id => "submit-negbutton" %> I'd return it 
                   <%= f.submit "SUBMIT", :id => "submit-button", :class => "btn btn-success btn-sm" %>
               </div>
