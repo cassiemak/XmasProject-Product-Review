@@ -6,7 +6,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :brand
       t.integer :price
       t.string :found_at
-      t.string :description
+      t.text :description
       t.string :img_url
 
       t.timestamps

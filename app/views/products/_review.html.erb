@@ -4,43 +4,42 @@
       <%= image_tag "profile/penguin.jpg", :class => "img-responsive img-circle" %>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-9 review">
-      <div class="col-xs-12">
-        <div class="col-xs-4 author "> Written by <%= review.user.email.split("@")[0] %> </div>
-        <div class="col-xs-4 timestamp">
-          <%= local_time(review.updated_at) %>
-          <br>
-          (<%= local_time_ago(review.updated_at) %>)
+      <div class="row">
+        <div class="col-xs-12 first-row-review">
+          <div class="col-xs-4 author "> Written by <%= review.user.email.split("@")[0] %> </div>
+          <div class="col-xs-4 timestamp">
+            <%= local_time(review.updated_at) %>
+            <br>
+            (<%= local_time_ago(review.updated_at) %>)
+          </div>
+          <div class="col-xs-4 rating"> 
+            <% if review.rating == 1 %> 
+              <img src="<%= asset_path "Thumbs_Up.png" %>" class="img-responsive rating-image">
+            <% elsif review.rating == -1 %>
+              <img src="<%= asset_path "Thumbs_down.png" %>" class="img-responsive rating-image">
+            <% else %>
+            <% end %>
+          </div>
         </div>
-        <div class="col-xs-4 rating"> 
-          
-          <% if review.rating == 1 %> 
-            <img src="<%= asset_path "Thumbs_Up.png" %>" class="img-responsive rating-image">
-          <% elsif review.rating == -1 %>
-            <img src="<%= asset_path "Thumbs_down.png" %>" class="img-responsive rating-image">
-          <% else %>
+        <div class="col-xs-12 comment">
+          <%= review.message %>
+        </div>
+        <div class="col-xs-12 edit-comment">
+
+        <%= form_for review, :url => edit_review_path(review), :remote => true, :method => :get do |f| %>
+
+            <%= f.submit "Edit", :class => "edit-button btn btn-warning btn-sm" %>
           <% end %>
-          
+
+
+          <!-- <a type="button" class="edit-button btn btn-warning btn-sm" data-id="<%= review.id %>" href="#update-form">Edit</a>  -->
+
+          <%= form_for review, :remote => true, :method => :delete do |f| %>
+            <!-- <button class="delete-button btn btn-danger btn-sm">Delete</button>
+            <!-- deleting the review of THIS specific review -->
+            <%= f.submit "Delete", :class => "delete-button btn btn-danger btn-sm" %>
+          <% end %>
         </div>
-      </div>
-      <div class="col-xs-12 comment">
-        <%= review.message %>
-      </div>
-      <div class="col-xs-12 edit-comment">
-
-      <%= form_for review, :url => edit_review_path(review), :remote => true, :method => :get do |f| %>
-
-          <%= f.submit "Edit", :class => "edit-button btn btn-warning btn-sm" %>
-        <% end %>
-
-
-        <!-- <a type="button" class="edit-button btn btn-warning btn-sm" data-id="<%= review.id %>" href="#update-form">Edit</a>  -->
-
-        <%= form_for review, :remote => true, :method => :delete do |f| %>
-          <!-- <button class="delete-button btn btn-danger btn-sm">Delete</button>
-          <!-- deleting the review of THIS specific review -->
-          <%= f.submit "Delete", :class => "delete-button btn btn-danger btn-sm" %>
-        <% end %>
-
       </div>
     </div>
   </div>
