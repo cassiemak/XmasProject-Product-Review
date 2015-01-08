@@ -1,16 +1,22 @@
 <div class="container">
   <div class="row text-center">
     <div class="col-xs-12">
-      <h1>All Products</h1>
+      <h1>SIU-BO-BO 小寶寶</h1>
     </div>
-
+    <div class="col-xs-6 col-xs-offset-3" id="intro">
+      <p>Find out all mommies experiences with all the baby products out there.</p> 
+      <p>Sign up and start writing your own reviews ahd share with other fellow mommies.</p>  
+      <p>Get monthly free products samples from us!!! </p>
+    </div>
     <div class="col-xs-12 product">
       <% @products.each do |product| %>
         <span class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-          <%= link_to product do %>
-            <%= image_tag asset_url('product/neckcushion.jpg'), :class => "img-responsive index-pix" %>
-            <%= product.product_name %>
-          <% end %>
+          <div class="index-pix">
+            <%= link_to product do %>
+              <%= image_tag asset_url('product/neckcushion.jpg'), :class => "img-responsive " %>
+              <%= product.product_name %>
+            <% end %>
+          </div>
         </span>
       <% end %>
     </div>

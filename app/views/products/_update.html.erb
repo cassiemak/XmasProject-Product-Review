@@ -1,10 +1,10 @@
 <%= form_for @review, :remote => true, :method => :patch do |f| %>
   <div class="hidden-xs hidden-sm col-md-3 author_picture">
-    <%= image_tag "profile/lion.jpg", :class => "img-responsive" %>
+    <%= image_tag "profile/lion.jpg", :class => "img-responsive img-circle" %>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-9 ">
     <div>
-      <%= f.text_area :message, :type => "text", :row => "3", :class=> "col-xs-12 newComment", :placeholder => "review.message" %> 
+      <%= f.text_area :message, :type => "text", :row => "3", :class=> "col-xs-12 newComment", :placeholder => "Enter your review here!" %> 
       <%= f.text_field :product_id, :value => review.product_id, :type => "hidden" %>
     </div>
     <div class="col-xs-12" id="like-dislike">
@@ -18,7 +18,8 @@
         <% else %>
         <% end %>
         <%= f.submit "Update", :id => "submit-button", :class => "btn btn-success btn-sm" %>
-
     </div>
+  </div>
+  <div class="col-xs-12 error_message">
   </div>
 <% end %>

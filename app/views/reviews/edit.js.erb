@@ -10,6 +10,10 @@ $("#update-form").show();
 
 $("#update-form").html("<%= escape_javascript render :partial => 'products/update', :locals => {:review => @review} %> ");
 
-$('html,body').animate({scrollTop:$(this.hash).offset().top}, 1000);
+$('html,body').animate({scrollTop:$('#update-form').offset().top}, 1000);
+
+var reviewId = "<%= @review.id %>";
+
+$('.single-review[data-review-id=' + reviewId + ']').hide();
 
 

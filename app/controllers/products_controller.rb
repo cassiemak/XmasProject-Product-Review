@@ -24,7 +24,7 @@ before_action :authenticate_user!, only: [:new, :create]
   def show
     @product = Product.find(params[:id])
 
-    @reviews = @product.reviews
+    @reviews = @product.reviews.order('updated_at ASC')
 
     # @user = @reviews.email
   end

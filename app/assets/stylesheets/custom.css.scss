@@ -38,9 +38,11 @@
 
 }
 
-.login {
+.login div{
   text-align: right;
-  padding: 20px;
+  // padding: 20px;
+  align-content: right;
+  display: inline-block;
 }
 
 .home {
@@ -61,6 +63,9 @@
   // display: inline-block;
 }
 
+.right-inner-addon{
+  align-content: right;
+}
 .product_Picture{
   padding: 20px;
   max-width: 300px;
@@ -71,16 +76,25 @@
   // min-width: 500px;
 }
 
+#intro{
+  text-align: center center;
+}
+
 .index-pix{
   opacity: 0.8;
   border: 50px;
   border-color: red;
-}
-
-img.index-pix:hover{
+  &:hover {
+    opacity: 1;
+    text-decoration: none;
+    background-color: black;
     color: red;
-    border: 5px;
+    border: 10px;
+    border-color: red;
+    font-size: xx-large;
+
   }
+}
 
 #index-pix-name{
 

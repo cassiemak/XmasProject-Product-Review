@@ -43,6 +43,23 @@ class ReviewsController < ApplicationController
   def update
     @review = Review.find(params[:id]) 
 
+    
+
+    if @review.update(
+        :message => params[:review][:message],
+        :rating => params[:review][:rating]
+      )
+      respond_to do |format|
+        format.js {render 'update.js.erb'}
+        format.html{ redirect_to @review }
+      end
+    else
+      respond_to do |format|
+          format.js {render 'fail.js.erb'}
+          format.html{ redirect_to :back}
+        end
+    end
+
   end
 
 end
