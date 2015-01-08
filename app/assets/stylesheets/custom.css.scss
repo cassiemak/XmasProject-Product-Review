@@ -184,10 +184,13 @@ div.home {
   background-color: rgba(100, 100, 100, 0.4);
 }
 
-.rating-image{
+img.rating-image{
   max-height: 80px;
-  // align-content: right;
-  // text-align: right;
+  display: inline-block;
+}
+
+.rating{
+  text-align: right;
 }
 
 .padding{
