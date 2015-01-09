@@ -17,6 +17,10 @@
           <div class="index-pix">
             <%= link_to product do %>
               <%= image_tag product.img_url, :class => "img-responsive index-pictures" %>
+            <% end %>
+          </div>
+          <div>
+            <%= link_to product do %>
               <%= product.product_name %>
             <% end %>
           </div>
