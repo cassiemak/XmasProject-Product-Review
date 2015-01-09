@@ -1,12 +1,4 @@
 .body-background{
-  /*background-color: #333330;*/
-  // background-color: rgba(0, 176, 185, 0.8);
-  // background-image: image-url('baby-background.jpg');
-  // background-size: cover;
-  // /*color: #bfbfbb;*/
-  // // color: #333330;
-  // color: black;
-
   background: asset-url('background/baby-background.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
      -moz-background-size: cover;
@@ -94,6 +86,7 @@ div.home {
   // opacity: 0.8;
   // border: 50px;
   // border-color: red;
+  overflow: hidden;
   align-content: center center;
   &:hover {
     opacity: 1;
@@ -102,9 +95,13 @@ div.home {
     color: red;
     // border: 10px;
     // border-color: red;
-    font-size: xx-large;
-
+    // font-size: xx-large;
   }
+}
+
+img.index-pictures{
+  max-height: 300px;
+  
 }
 
 // Product Individual Page
