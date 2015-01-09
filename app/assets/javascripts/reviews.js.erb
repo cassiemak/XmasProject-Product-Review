@@ -17,11 +17,15 @@ $(document).ready(function(){
 
     // });
   // });
+var status = false; 
+
   $(document).on('click','#cancel-button',function(){
     console.log("cancel button helo");
     $("#new-form").show();
-
     $("#update-form").hide();
+    var reviewId = $('#cancel-button').data("id");
+    $('.single-review[data-review-id=' + reviewId + ']').show();
+    $('html,body').animate({scrollTop:$('#new-form').offset().top}, 500);
     // $('.newComment').val(""); 
   })
 

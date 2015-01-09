@@ -28,7 +28,7 @@
           <%= f.radio_button :rating, 0, :checked => false, :id => "submit-neutralbutton" %> I feel neutral 
           <%= f.radio_button :rating, -1, :checked => false, :id => "submit-negbutton" %> I'd return it 
         <% end %>
-        <%= f.submit "Cancel", :id => "cancel-button", :class => "btn btn-warning btn-sm" %>
+        <%= link_to "Cancel", "#", :id => "cancel-button", :class => "btn btn-warning btn-sm", "data-id" => review.id %>
         <%= f.submit "Update", :id => "submit-button", :class => "btn btn-success btn-sm" %>
     </div>
   </div>
