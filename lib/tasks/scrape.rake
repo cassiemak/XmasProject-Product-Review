@@ -5,6 +5,7 @@ namespace :scrape do
     require 'open-uri'
     require 'nokogiri'
 
+    # 0-608 only
     (0..1000).each do |data_id|
       input_data(data_id)
       puts data_id
