@@ -1,17 +1,18 @@
 console.log("lalala edit button works!");
 
-status = true;
+if (status == false){
+  status = true;
+  $("#new-form").hide();
+  $("#update-form").show();
 
+  $("#update-form").html("<%= escape_javascript render :partial => 'products/update', :locals => {:review => @review} %> ");
+  $('html,body').animate({scrollTop:$('#update-form').offset().top}, 1000);
 
-$("#new-form").hide();
-$("#update-form").show();
+  var reviewId = "<%= @review.id %>";
 
-$("#update-form").html("<%= escape_javascript render :partial => 'products/update', :locals => {:review => @review} %> ");
-
-$('html,body').animate({scrollTop:$('#update-form').offset().top}, 1000);
-
-var reviewId = "<%= @review.id %>";
-
-$('.single-review[data-review-id=' + reviewId + ']').hide();
-
+  $('.single-review[data-review-id=' + reviewId + ']').hide();
+}
+else {
+  $().trigger('click')
+}
 

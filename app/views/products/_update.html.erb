@@ -8,28 +8,34 @@
       <%= f.text_field :product_id, :value => review.product_id, :type => "hidden" %>
     </div>
     <div class="col-xs-12" id="like-dislike">
+      <% if review.rating == 1 %> 
+        <%= f.radio_button :rating, 1, :checked => true, :id => "submit-posbutton" %> I'd recommend it 
+        <%= f.radio_button :rating, 0, :checked => false, :id => "submit-neutralbutton" %> I feel neutral 
+        <%= f.radio_button :rating, -1, :id => "submit-negbutton" %> I'd return it 
+      <% elsif review.rating == 0 %>
+        <%= f.radio_button :rating, 1, :id => "submit-posbutton" %> I'd recommend it 
+        <%= f.radio_button :rating, 0, :checked => true, :id => "submit-neutralbutton" %> I feel neutral 
+        <%= f.radio_button :rating, -1, :checked => false, :id => "submit-negbutton" %> I'd return it 
+      <% elsif review.rating == -1 %>
+        <%= f.radio_button :rating, 1, :id => "submit-posbutton" %> I'd recommend it 
+        <%= f.radio_button :rating, 0, :checked => false, :id => "submit-neutralbutton" %> I feel neutral 
+        <%= f.radio_button :rating, -1, :checked => true, :id => "submit-negbutton" %> I'd return it 
+      <% else %>
+        <%= f.radio_button :rating, 1, :checked => false, :id => "submit-posbutton" %> I'd recommend it 
+        <%= f.radio_button :rating, 0, :checked => false, :id => "submit-neutralbutton" %> I feel neutral 
+        <%= f.radio_button :rating, -1, :checked => false, :id => "submit-negbutton" %> I'd return it 
+      <% end %>
 
-        <% if review.rating == 1 %> 
-          <%= f.radio_button :rating, 1, :checked => true, :id => "submit-posbutton" %> I'd recommend it 
-          <%= f.radio_button :rating, 0, :checked => false, :id => "submit-neutralbutton" %> I feel neutral 
-          <%= f.radio_button :rating, -1, :id => "submit-negbutton" %> I'd return it 
+<!--       <%= cat = false %>
+      <%= dog = true %>
+      <%= gg = "submit-negbutton" %>
 
-        <% elsif review.rating == 0 %>
-          <%= f.radio_button :rating, 1, :id => "submit-posbutton" %> I'd recommend it 
-          <%= f.radio_button :rating, 0, :checked => true, :id => "submit-neutralbutton" %> I feel neutral 
-          <%= f.radio_button :rating, -1, :checked => false, :id => "submit-negbutton" %> I'd return it 
-        
-        <% elsif review.rating == -1 %>
-          <%= f.radio_button :rating, 1, :id => "submit-posbutton" %> I'd recommend it 
-          <%= f.radio_button :rating, 0, :checked => false, :id => "submit-neutralbutton" %> I feel neutral 
-          <%= f.radio_button :rating, -1, :checked => true, :id => "submit-negbutton" %> I'd return it 
-        <% else %>
-          <%= f.radio_button :rating, 1, :checked => false, :id => "submit-posbutton" %> I'd recommend it 
-          <%= f.radio_button :rating, 0, :checked => false, :id => "submit-neutralbutton" %> I feel neutral 
-          <%= f.radio_button :rating, -1, :checked => false, :id => "submit-negbutton" %> I'd return it 
-        <% end %>
-        <%= link_to "Cancel", "#", :id => "cancel-button", :class => "btn btn-warning btn-sm", "data-id" => review.id %>
-        <%= f.submit "Update", :id => "submit-button", :class => "btn btn-success btn-sm" %>
+      <%= f.radio_button :rating, 1, :checked => cat, :id => "submit-posbutton" %> I'd recommend it 
+      <%= f.radio_button :rating, 0, :checked => dog, :id => "submit-neutralbutton" %> I feel neutral 
+      <%= f.radio_button :rating, -1, :id => gg %> I'd return it  -->
+
+      <%= link_to "Cancel", "#", :id => "cancel-button", :class => "btn btn-warning btn-sm", "data-id" => review.id %>
+      <%= f.submit "Update", :id => "submit-button", :class => "btn btn-success btn-sm" %>
     </div>
   </div>
   <div class="col-xs-12 error_message">

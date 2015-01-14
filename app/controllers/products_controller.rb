@@ -1,6 +1,5 @@
 class ProductsController < ApplicationController
-before_action :authenticate_user!, only: [:new, :create]
-
+  before_action :authenticate_user!, only: [:new, :create]
 
   def index
     @products = Product.all
@@ -24,14 +23,15 @@ before_action :authenticate_user!, only: [:new, :create]
   def show
     @product = Product.find(params[:id])
 
+    # @reviews = @product.reviews.order(:updated_at)
     @reviews = @product.reviews.order('updated_at ASC')
 
     # @user = @reviews.email
   end
 
   private
-  def product_param
-    params.require(:product).permit(:product_name, :brand, :price, :found_at, :description, :img_url)
-  end
+    def product_param
+      params.require(:product).permit(:product_name, :brand, :price, :found_at, :description, :img_url)
+    end
 
 end

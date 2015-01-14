@@ -1,42 +1,43 @@
-<!-- <div class="row"> -->
-  <div class=" row single-review" data-review-id="<%= review.id %>">
-    <div class="hidden-xs hidden-sm col-md-3 author_picture">
-      <%= image_tag "profile/penguin.jpg", :class => "img-responsive img-circle" %>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-9 review">
-      <div class="row">
-        <div class="col-xs-12 first-row-review">
-          <div class="row">
-            <div class="col-xs-4 author "> Written by <%= review.user.email.split("@")[0] %> </div>
-            <div class="col-xs-4 timestamp">
-              <%= local_time(review.updated_at) %>
-              <br>
-              (<%= local_time_ago(review.updated_at) %>)
-            </div>
-            <div class="col-xs-4 rating"> 
-              <% if review.rating == 1 %> 
-                <img src="<%= asset_path "Thumbs_Up.png" %>" class="img-responsive rating-image">
-              <% elsif review.rating == -1 %>
-                <img src="<%= asset_path "Thumbs_down.png" %>" class="img-responsive rating-image">
-              <% else %>
-              <% end %>
-            </div>
+<div class="row single-review" data-review-id="<%= review.id %>">
+  <div class="hidden-xs hidden-sm col-md-3 author_picture">
+    <%= image_tag "profile/penguin.jpg", :class => "img-responsive img-circle" %>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-9 review">
+    <div class="row">
+      <div class="col-xs-12 first-row-review">
+        <div class="row">
+          <div class="col-xs-4 author"> Written by <%= review.user.email.split("@")[0] %> </div>
+          <div class="col-xs-4 timestamp">
+            <%= local_time(review.updated_at) %>
+            <br>
+            (<%= local_time_ago(review.updated_at) %>)
+          </div>
+          <div class="col-xs-4 rating"> 
+            <% if review.rating == 1 %> 
+              <img src="<%= asset_path "Thumbs_Up.png" %>" class="img-responsive rating-image">
+            <% elsif review.rating == -1 %>
+              <!-- use ruby code -->
+              <%= image_tag "Thumbs_down.png", :class => "img-responsive rating-image" %>
+              <!-- <img src="<%= asset_path "Thumbs_down.png" %>" class="img-responsive rating-image"> -->
+            <% else %>
+            <% end %>
           </div>
         </div>
-        <div class="col-xs-12 comment">
-          <%= review.message %>
-        </div>
-        <div class="col-xs-12 edit-comment">
-          <% if current_user == review.user %>
-            <%= form_for review, :url => edit_review_path(review), :remote => true, :method => :get do |f| %>
-              <%= f.submit "Edit", :class => "edit-button btn btn-warning btn-sm" %>
-            <% end %>
-            <%= form_for review, :remote => true, :method => :delete do |f| %>
-            <%= f.submit "Delete", :class => "delete-button btn btn-danger btn-sm" %>
-            <% end %>
+      </div>
+      <div class="col-xs-12 comment">
+        <%= review.message %>
+      </div>
+      <div class="col-xs-12 edit-comment">
+        <% if current_user == review.user %>
+          <%= form_for review, :url => edit_review_path(review), :remote => true, :method => :get do |f| %>
+            <%= f.submit "Edit", :class => "edit-button btn btn-warning btn-sm" %>
           <% end %>
-        </div>
+          
+          <%= form_for review, :remote => true, :method => :delete do |f| %>
+            <%= f.submit "Delete", :class => "delete-button btn btn-danger btn-sm" %>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>
-<!-- </div>   -->
+</div>

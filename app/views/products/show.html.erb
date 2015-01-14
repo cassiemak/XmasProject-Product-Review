@@ -34,7 +34,6 @@
     <!-- prompt logged in user to comment -->
     <div class="col-xs-12 new-review">
       <% if current_user %>
-
         <div id="new-form">
           <%= form_for Review.new, :remote => true, :method => :post do |f| %>
             <div class="hidden-xs hidden-sm col-md-3 author_picture">

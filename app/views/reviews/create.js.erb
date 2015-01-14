@@ -1,5 +1,9 @@
 var new_review = "<%= raw escape_javascript(render :partial => 'products/review', :locals => {:review => @review}) %>";
 
+// no capitalized words in the css class
+// camelCase is for JS
+// dash is for css class
+// anything else is undercore
 $('.product_Review').append(new_review);
 
 $('.newComment').val(""); 
