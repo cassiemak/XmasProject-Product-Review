@@ -106,7 +106,11 @@ div.home {
   z-index: 1;
   &:hover{
     // border: 1px solid red;
-    background-color: rgba(153, 153, 147, 0.7);
+     // just pure background color
+    // background-color: rgba(153, 153, 147, 0.7);
+      // when hover, background color has a linear-gradient color
+    // background: linear-gradient(to bottom, rgba(47,114,129,0.85) 0%,rgba(88,201,169,0.55) 100%)
+    background: linear-gradient(to bottom, rgba(110,122,114,0.95) 0%,rgba(143,235,167,0.55) 100%)
   }
 }
 
