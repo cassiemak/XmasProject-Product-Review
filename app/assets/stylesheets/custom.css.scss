@@ -9,7 +9,6 @@
 .vertical-center {
   min-height: 100%;
   min-height: 100vh;
-
   display: flex;
   align-items: center;
 }
@@ -123,10 +122,12 @@ div.home {
 // show prouct.product name when hpver
 .index-pix-inner:hover .index-product-name{
     display: block;
-    color: black;
-    font-style: bold;
+    color: white;
+    font-weight: 50px;
+    // font-style: bold;
     font-size: 20px;
     align-content: center center;
+    margin-top: 105px;
   }
 
 // the span that occupy the entire space where the a tag is, so it links to the product link wherever you click
@@ -136,6 +137,7 @@ div.home {
   height: 100%;
   top: 0;
   left: 0;
+  align-content: center;
 }
 
 // Product Individual Page
@@ -147,7 +149,7 @@ div.home {
   text-align: left;
   padding: 20px;
   // background-color: rgba(240, 223, 94, 0.7);
-  background-color: rgba(237, 249, 250, 0.9)
+  background-color: rgba(237, 249, 250, 0.9);
 }
 
 .single-review{
@@ -183,10 +185,9 @@ div.home {
 
 .edit-comment{
   text-align: right;
-}
-
-.edit-comment form {
-  display: inline-block;
+  form {
+    display: inline-block;
+  }
 }
 
 .comment {
